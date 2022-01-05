@@ -23,7 +23,7 @@ brew install jq
 1.  Git clone or otherwise download the *master* branch of this project to your hard drive
 
 2.  Open up MultiMC.app, go to "Settings -> Custom Commands".  In "Wrapper Command Field", add wrapper script
-    `<multic-wrapper-script-directory>/wrapper.sh`
+    `<multic-wrapper-script-directory>/wrapper.sh <HOMEBREW_ROOT directory>`
 
 That's it.  When you run an instance of Minecraft in MultiMC, this wrapper script will check if the computer is a M1 Mac, then
 run the approperiate fixes to the MultiMC instance one time.  (There is a lock file added to the instance which can be removed
