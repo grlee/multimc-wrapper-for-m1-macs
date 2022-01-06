@@ -31,7 +31,6 @@ EOM
 
   mmc_update_component ca.weblite.java-objc-bridge "{\"cachedName\": \"Java-objc Bridge ${JAVA_OBJC_BRIDGE_FULL_VERSION}\",\"cachedVersion\": \"${JAVA_OBJC_BRIDGE_FULL_VERSION}\", \"cachedVolatile\": true, \"uid\": \"ca.weblite.java-objc-bridge\",\"version\": \"${JAVA_OBJC_BRIDGE_FULL_VERSION}\"}"
 
-
 }
 
 version_gt $MINECRAFT_VERSION 1.15.999999 && {
