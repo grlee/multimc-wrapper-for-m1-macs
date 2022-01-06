@@ -12,7 +12,6 @@ function mmc_update_component {
   uid=$1; shift
   json="$@"
   MMC_PACK_JSON_FILE_NEW="${MMC_PACK_JSON_FILE}.new.$(date +%s)"
-  cat "${MMC_PACK_JSON_FILE}" | /opt/homebrew/bin/jq ".components = (del(.components[] | select(.uid==\"${uid}\")) | .components + [${json}])" > "${MMC_PACK_JSON_FILE_NEW}" && mv "${MMC_PACK_JSON_FILE_NEW}" "${MMC_PACK_JSON_FILE}"
-
-
+  cat "${MMC_PACK_JSON_FILE}" | /opt/homebrew/bin/jq ".components = (del(.components[] | select(.uid==\"${uid}\")) | .components + [${json}])" > "${MMC_PACK_JSON_FILE_NEW}"
+  cp -f "${MMC_PACK_JSON_FILE_NEW}" "${MMC_PACK_JSON_FILE}"
 }
